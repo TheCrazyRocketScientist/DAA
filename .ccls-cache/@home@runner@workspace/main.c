@@ -123,7 +123,7 @@ int main() {
       if(temp)
           printf("Key found in tree. \n");
       else
-          printf("Key not founf in tree. \n");
+          printf("Key not found in tree. \n");
       break;
     case 6:
       exit(0);
