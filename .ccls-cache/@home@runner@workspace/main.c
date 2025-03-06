@@ -11,14 +11,12 @@ node *root;
 
 int search(int val, node *current) {
   if (current->data == val) {
-    printf("Key Found @ memory location: %p", current);
     return 1;
   } else if (val > current->data && current->right != NULL) {
     search(val, current->right);
   } else if (val < current->data && current->left != NULL) {
     search(val, current->left);
   } else if (current->right == NULL && current->left == NULL) {
-    printf("Key not found");
     return 0;
   }
 }
@@ -121,7 +119,11 @@ int main() {
     case 5:
       printf("Enter key : ");
       scanf("%d", &temp);
-      search(temp, root);
+      temp = search(temp, root);
+      if(temp)
+          printf("Key found in tree. \n");
+      else
+          printf("Key not founf in tree. \n");
       break;
     case 6:
       exit(0);
