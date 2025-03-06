@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Node {
   struct Node *left;
@@ -29,7 +30,7 @@ void insertNode(int val, node *current, node *newNode) {
     insertNode(val, current->left, newNode);
   } else if (val > current->data && current->right == NULL) {
     current->right = newNode;
-  } else if (val < current->data && current->right == NULL) {
+  } else if (val < current->data && current->left == NULL) {
     current->left = newNode;
   }
 }
