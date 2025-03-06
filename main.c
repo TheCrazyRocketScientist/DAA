@@ -5,10 +5,10 @@ struct node{
 int val;
 struct node* left;
 struct node* right;
-};
+}node;
 
-struct node* create(){
-  struct node* newNode = (struct node*)malloc(sizeof(struct node));
+node* create(){
+  node* newNode = (node*)malloc(sizeof(node));
   return newNode;
 }
 
