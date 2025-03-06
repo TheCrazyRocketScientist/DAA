@@ -8,7 +8,7 @@ struct node* right;
 };
 
 struct node* create(){
-  struct newNode*  = (sturct node*)malloc(sizeOf(struct node*));
+  struct node* newNode = (struct node*)malloc(sizeof(struct node));
   return newNode;
 }
 
